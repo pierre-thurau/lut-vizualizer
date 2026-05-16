@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./lumen-icon.png" width="128" height="128" alt="Lumen — LUT preview studio">
+<img src="./lumen-icon.png" width="128" height="128" alt="Lumen, LUT preview studio">
 
 # Lumen
 
@@ -8,8 +8,8 @@
 
 Real-time **LUT preview** studio for photographers and colorists.
 Drag in a folder of `.cube` files, point Lumen at your RAW or JPEG,
-and watch every look render — for real, on the GPU — in a single
-scrollable grid.
+and watch every look render in a single scrollable grid, for real,
+on the GPU.
 
 [![Download for Windows](https://img.shields.io/badge/⬇_Download_for_Windows-2563eb?style=for-the-badge&logoColor=white)](https://github.com/pierre-thurau/lut-vizualizer/releases/latest)
 &nbsp;&nbsp;
@@ -28,7 +28,7 @@ scrollable grid.
 Color graders waste **hours** auditioning LUTs one at a time. Every other
 tool either lies to you or makes you wait.
 
-- **Lightroom-style preview panels** use CSS filters that fake the look — what you see isn't what you get.
+- **Lightroom-style preview panels** use CSS filters that fake the look. What you see isn't what you get.
 - **DaVinci, Premiere & friends** force you to load each LUT one at a time.
 - **Online LUT viewers** can't even open your RAW.
 
@@ -43,7 +43,7 @@ through 700 looks in under a minute and *know* which one is right.
 | | |
 |---|---|
 | **🎨 Real previews, never fakes** | Every tile is your photo with the actual LUT applied via trilinear interpolation in a GPU compute shader. Not CSS filters. Not approximations. Pixel-perfect. |
-| **⚡ Fast at any scale** | A 700-LUT pack renders in under a minute on mid-range hardware. Rotation? Doesn't re-render — survives via in-memory canonical-RGBA cache. Switching quality cancels stale renders mid-flight. |
+| **⚡ Fast at any scale** | A 700-LUT pack renders in under a minute on mid-range hardware. Rotation? Doesn't re-render: survives via in-memory canonical-RGBA cache. Switching quality cancels stale renders mid-flight. |
 | **📷 RAW out of the box** | `.NEF` (Nikon), `.CR2` / `.CR3` (Canon), `.ARW` (Sony), `.RAF` (Fuji), `.RW2`, `.ORF`, `.SRW`, `.DNG`. Decoded natively. |
 | **🔀 Compare side-by-side** | Slider, side-by-side split, or "hold to peek at original". Stage as many LUTs as you want via the compare tray. |
 | **📦 Batch JPEG export** | Stage the LUTs you like, click Export, get a folder of `<photo>_<lut>.jpg` files. |
@@ -57,7 +57,7 @@ through 700 looks in under a minute and *know* which one is right.
 
 ## 📥 Install
 
-**Windows 10 / 11 (x64)** — single installer, ~9 MB:
+**Windows 10 / 11 (x64)**. Single installer, ~9 MB:
 
 <div align="center">
 
@@ -77,11 +77,11 @@ project). Click **More info → Run anyway**.
 
 1. **Open Lumen** from the Start menu
 2. **Drag a folder** of `.cube` / `.lut` / `.3dl` files anywhere on the window (or click *Add LUT folder*)
-3. **Open a photo** — drag a RAW/JPEG in, or use the toolbar
+3. **Open a photo**: drag a RAW/JPEG in, or use the toolbar
 4. **Click any tile** to compare it side-by-side with the original
 5. Press **F** to favourite a look, **C** to stage it in the compare tray, **?** for the full shortcut sheet
 
-Don't have a LUT pack handy? Click **Try sample LUTs** on the welcome screen — Lumen ships with six CC0-licensed looks (sepia, teal & orange, B&W punch, warm vintage, cool blue, identity).
+Don't have a LUT pack handy? Click **Try sample LUTs** on the welcome screen. Lumen ships with six CC0-licensed looks (sepia, teal & orange, B&W punch, warm vintage, cool blue, identity).
 
 ---
 
@@ -93,14 +93,14 @@ Don't have a LUT pack handy? Click **Try sample LUTs** on the welcome screen —
 | **UI** | [Svelte 5](https://svelte.dev) (runes-based reactive store) + TypeScript |
 | **GPU renderer** | [wgpu](https://wgpu.rs) compute shader with trilinear sampler |
 | **CPU fallback** | [rayon](https://github.com/rayon-rs/rayon) data-parallel applier, row-stripe cancellable |
-| **JPEG encoder** | [mozjpeg](https://github.com/mozilla/mozjpeg) — smaller files, faster encode than the `image` crate default |
+| **JPEG encoder** | [mozjpeg](https://github.com/mozilla/mozjpeg) (smaller files, faster encode than the `image` crate default) |
 | **RAW decoder** | [rawloader](https://github.com/pedrocr/rawloader) + [imagepipe](https://github.com/pedrocr/imagepipe) |
 | **Updater** | minisign-signed manifests fetched from this repo's Releases |
 
 The Rust workspace lives in three crates:
-- `lut_core` — parsing, 3D LUT data structure, CPU + GPU applier, cache, scan, RAW decode
-- `lut_app` — Tauri command surface + app state
-- `lut_cli` — standalone CLI: apply one LUT to one photo (testing / scripting)
+- `lut_core`: parsing, 3D LUT data structure, CPU + GPU applier, cache, scan, RAW decode
+- `lut_app`: Tauri command surface + app state
+- `lut_cli`: standalone CLI for applying one LUT to one photo (testing / scripting)
 
 ---
 
@@ -109,7 +109,7 @@ The Rust workspace lives in three crates:
 Dual-licensed under either **MIT** or **Apache-2.0** at your option.
 
 Author preference: **personal & creative use, not for commercial
-redistribution.** The bundled CC0 sample LUTs are public domain — use
+redistribution.** The bundled CC0 sample LUTs are public domain. Use
 those however you like.
 
 ---
@@ -118,7 +118,7 @@ those however you like.
 
 Created by **Pierre Thurau**.
 
-Standing on the shoulders of giants — [Tauri](https://tauri.app),
+Standing on the shoulders of giants: [Tauri](https://tauri.app),
 [Svelte](https://svelte.dev), [Rust](https://www.rust-lang.org),
 [wgpu](https://wgpu.rs), [image-rs](https://github.com/image-rs/image),
 [rawloader](https://github.com/pedrocr/rawloader), and
