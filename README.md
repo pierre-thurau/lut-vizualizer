@@ -38,6 +38,30 @@ through 700 looks in under a minute and *know* which one is right.
 
 ---
 
+## 📸 See it in action
+
+<div align="center">
+
+<img src="./screenshots/grid.png" alt="The main grid: hundreds of LUT previews rendered on the same photo" width="900">
+
+*The main grid: every `.cube` in your folder rendered on your actual photo, in parallel, on the GPU.*
+
+<br>
+
+<img src="./screenshots/compare.png" alt="Side-by-side compare with slider" width="900">
+
+*Compare any two LUTs side-by-side. Drag the slider, toggle, or hold a key to peek at the original.*
+
+<br>
+
+<img src="./screenshots/fullscreen.png" alt="Fullscreen view of a single LUT applied to a RAW photo" width="900">
+
+*Fullscreen on any tile to inspect details at full resolution.*
+
+</div>
+
+---
+
 ## ✨ Highlights
 
 | | |
@@ -50,14 +74,14 @@ through 700 looks in under a minute and *know* which one is right.
 | **💾 Smart caching** | Disk-backed LRU + in-memory canonical cache. Re-opening the same photo + LUT pair = instant. |
 | **🌍 Localised** | English + French shipped. Adding a language is a one-PR change. |
 | **🌙 Dark + light themes** | Auto-detect or toggle with `T`. |
-| **🔄 Auto-update** | Signed releases. Your installed copy checks for new versions and prompts to install. |
+| **🔄 Auto-update** | Signed releases. Your installed copy checks for new versions daily and prompts to install. |
 | **🎁 CC0 sample LUTs included** | Six bundled looks so you can try Lumen before downloading a LUT pack. |
 
 ---
 
 ## 📥 Install
 
-**Windows 10 / 11 (x64)**. Single installer, ~9 MB:
+**Windows 10 / 11 (x64)**. Single installer, ~6 MB:
 
 <div align="center">
 
@@ -82,6 +106,23 @@ project). Click **More info → Run anyway**.
 5. Press **F** to favourite a look, **C** to stage it in the compare tray, **?** for the full shortcut sheet
 
 Don't have a LUT pack handy? Click **Try sample LUTs** on the welcome screen. Lumen ships with six CC0-licensed looks (sepia, teal & orange, B&W punch, warm vintage, cool blue, identity).
+
+---
+
+## ☕ Like Lumen? Keep it caffeinated
+
+Lumen is free and ad-free. If it saved you an hour of pixel-peeping
+this week, consider sending a coffee my way. No subscription, no
+account, just a one-tap thank-you that funds the next feature.
+
+<div align="center">
+
+### [💚 Tip the author on Revolut](https://revolut.me/pierrethurau)
+
+</div>
+
+Either way, **starring the repo costs nothing** and helps other
+photographers find Lumen.
 
 ---
 
@@ -129,6 +170,7 @@ Standing on the shoulders of giants: [Tauri](https://tauri.app),
 <div align="center">
 
 **[Download](https://github.com/pierre-thurau/lut-vizualizer/releases/latest)** &nbsp;·&nbsp;
+**[Tip the author](https://revolut.me/pierrethurau)** &nbsp;·&nbsp;
 **[Report an issue](https://github.com/pierre-thurau/lut-vizualizer/issues)** &nbsp;·&nbsp;
 **[Latest version](https://github.com/pierre-thurau/lut-vizualizer/releases)**
 
