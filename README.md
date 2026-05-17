@@ -89,9 +89,39 @@ through 700 looks in under a minute and *know* which one is right.
 
 </div>
 
-On first launch Windows SmartScreen may flash **"Windows protected your
-PC"** because the installer isn't yet code-signed (free / personal
-project). Click **More info → Run anyway**.
+### About the Windows SmartScreen warning
+
+The first time you run the installer, Windows will likely show a blue
+screen titled **"Windows protected your PC"** with this text:
+
+> *Microsoft Defender SmartScreen prevented an unrecognized app from
+> starting. Running this app might put your PC at risk.*
+
+It then offers only one visible button: **Don't run**.
+
+**This is normal for new indie software**, not a sign that anything is
+wrong. SmartScreen flags every Windows executable that isn't
+*"code-signed"* by a recognised publisher. Code signing requires a
+certificate from a certificate authority, which costs €200–€400 per
+year. Lumen is a free, non-commercial personal project so it isn't
+signed yet.
+
+**How to install anyway** (you only do this once):
+
+1. Click the small **"More info"** link in the SmartScreen window
+2. A new **"Run anyway"** button appears at the bottom right
+3. Click it. The installer launches normally.
+4. Future updates installed by Lumen itself (via the in-app updater)
+   won't trigger SmartScreen again because they're cryptographically
+   signed by the same key as the one you trusted, even if Microsoft
+   doesn't know about that key.
+
+If you'd rather verify before running, every release is built and
+published from the [public repo](https://github.com/pierre-thurau/lut-vizualizer)
+and signed with a key you can inspect (`tauri.conf.json::pubkey`).
+The matching `.sig` file is uploaded next to each installer on the
+Releases page. You can scan the installer at
+[virustotal.com](https://www.virustotal.com) too.
 
 > macOS and Linux builds coming. ⭐ [Star the repo](https://github.com/pierre-thurau/lut-vizualizer/stargazers) to get notified when they ship.
 
